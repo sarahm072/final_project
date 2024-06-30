@@ -1,0 +1,10 @@
+package final_project
+
+class Univ_director (var name:String, var email:String, var phoneNumber:String){
+     fun setDirettorToFaculty(faculty: Faculty){
+         faculty.directorOfFaculty= this.name
+     }
+     fun setChefDerpt(departement: Departement){
+         departement.chefOfTheDeprt=this.name
+     }
+}
