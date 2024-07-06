@@ -14,6 +14,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,7 +40,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.draw.clip
-
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.text.font.FontStyle
 
 
 class MainActivity : ComponentActivity() {
@@ -67,8 +69,11 @@ fun App( modifier: Modifier = Modifier) {
             Image(
                 painter = imagePainter,
                 contentDescription = "Description for accessibility",
-//                modifier = Modifier.clip(shape = RoundedCircleShape())
+                modifier = Modifier.clip(CircleShape)
+                    .size(200.dp)
             )
+            Text(text="Tech Savvy", letterSpacing=5.sp, color =Color.White)
+
          }
         }
     }
